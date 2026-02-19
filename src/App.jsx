@@ -110,12 +110,12 @@ function Home() {
         </p>
 
         <div className="mt-6 flex flex-col gap-3 sm:flex-row">
-          <Link
+          <link
             to="/cartas"
             className="inline-block rounded-2xl bg-slate-900 px-5 py-3 text-sm font-bold text-white"
           >
             Ver cartas disponíveis
-          </Link>
+          </link>
 
           <a
             href={WHATSAPP_LINK}
