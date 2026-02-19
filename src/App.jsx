@@ -1,5 +1,5 @@
 import React, { useMemo, useState } from "react";
-import { BrowserRouter, Routes, Route, NavLink } from "react-router-dom";
+import { HashRouter, Routes, Route, NavLink, Link } from "react-router-dom";
 
 const BRAND = {
   name: "Flash Consórcios",
@@ -145,12 +145,12 @@ function Home() {
         <p className="mt-3 text-slate-600">
           Cartas de crédito já contempladas para Auto e Imóvel.
         </p>
-        <a
+        <Link
           href="/cartas"
           className="mt-5 inline-block rounded-2xl bg-slate-900 px-5 py-3 text-sm font-bold text-white"
         >
           Ver cartas disponíveis
-        </a>
+        </Link>
       </section>
     </Layout>
   );
@@ -226,14 +226,15 @@ function Contato() {
 
 export default function App() {
   return (
-    <BrowserRouter>
+    <HashRouter>
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/cartas" element={<Cartas />} />
         <Route path="/simulador" element={<Simulador />} />
         <Route path="/contato" element={<Contato />} />
       </Routes>
-    </BrowserRouter>
+    </HashRouter>
+
   );
 }
 
